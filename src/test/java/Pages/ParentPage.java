@@ -46,6 +46,11 @@ public class ParentPage {
         select.selectByIndex(index);
     }
 
+    public void SelectMenuValue(WebElement element,String Value){
+        Select select=new Select(element);
+        select.selectByValue(Value);
+    }
+
     public int randomGenerator(int until){
         return (int)(Math.random()*until);
     }

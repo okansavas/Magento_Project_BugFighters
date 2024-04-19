@@ -54,6 +54,13 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "(//span[contains(text(),'Welcome')]) [1]")
     public WebElement WelcomeMessage;
 
+    @FindBy(id = "pass-error")
+    public WebElement passerrorMessage;
+
+    @FindBy(id = "email-error")
+    public WebElement emailerrorMessage;
+
+
 
 
     public WebElement getWebElement(String strElement) {
@@ -72,6 +79,10 @@ public class DialogContent extends ParentPage{
                 return this.signInEmail;
             case "signInpassword":
                 return this.signInpassword;
+            case "passerrorMessage":
+                return this.passerrorMessage;
+            case "emailerrorMessage":
+                return this.emailerrorMessage;
         }
         return null;
 
