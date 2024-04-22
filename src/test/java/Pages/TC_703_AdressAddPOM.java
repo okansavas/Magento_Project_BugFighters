@@ -67,6 +67,7 @@ public class TC_703_AdressAddPOM extends ParentPage {
     @FindBy(xpath = "//*[@id=\"maincontent\"]/div[1]/div[2]/div/div/div")
     public WebElement verification;
 
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "company":
