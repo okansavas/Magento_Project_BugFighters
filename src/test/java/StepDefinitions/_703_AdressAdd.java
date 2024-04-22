@@ -39,7 +39,6 @@ public class _703_AdressAdd {
     public void userConfirmsThatASuccessfulSaveProcessHasTakenPlace() {
         tc3.verifyContainsText(tc3.verification,"You saved the address.");
     }
-
     @And("the user fills the Address fields on the screen")
     public void theUserFillsTheAddressFieldsOnTheScreen(DataTable addressFields) {
         List<List<String>> listTxtYazi = addressFields.asLists(String.class);
