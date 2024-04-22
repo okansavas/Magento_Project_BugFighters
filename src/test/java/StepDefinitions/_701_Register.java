@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
+import Pages.TC_703_AdressAddPOM;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -10,19 +11,23 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public class _701_Register {
-
+    public WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(5));
     DialogContent dc=new DialogContent();
+
     @Given("User navigate to the Magento Website")
     public void userNavigateToTheMagentoWebsite() {
     GWD.getDriver().get("https://magento.softwaretestingboard.com/");
 
 
-
         if (dc.einwilligen.size()>0)
+            wait.until(ExpectedConditions.elementToBeClickable(dc.einwilligen.get(0)));
+
             dc.myClick(dc.einwilligen.get(0));
     }
 

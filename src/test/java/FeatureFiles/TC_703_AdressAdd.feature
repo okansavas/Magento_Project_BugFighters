@@ -10,20 +10,20 @@ Feature: Add Adress functionality
 
   Scenario Outline: Add new Address with invalid user information
     When User clicks the Address Book link
-    And the user fills the fields on the screen
-      | inputCompany   | <company>     |
-      | inputTelephone | <phonenumber> |
-      | inputStreet1   | <Street1>     |
-      | inputStreet2   | <Street2>     |
-      | inputCity      | <city>        |
-      | inputZipCode   | <zipcode>     |
+    And the user fills the Address fields on the screen
+      | company   | <company>     |
+      | telephone | <phonenumber> |
+      | street_1  | <Street1>     |
+      | street_2  | <Street2>     |
+      | city      | <city>        |
+      | zip       | <zipcode>     |
 
     And Select Region Counrty option
-      | selectState | <value> |
+      | state | <value> |
     And the user clicks the Save button
     Then user confirms that a successful Save process has taken place
     Examples:
       | company | phonenumber | Street1 | Street2 | city    | zipcode | value |
-      | techno  | 123456      | aaaa    | bbbbb   | hessen  | 789456  |5    |
-      | study   | 456987      | kalkan  | florida | alaska  | 789654  |  6   |
-      | campus  | 123654      | ollll   | saaa    | newburg | 456987  |  7  |
+      | techno  | 123456      | aaaa    | bbbbb   | hessen  | 78945   | 5     |
+      | study   | 456987      | kalkan  | florida | alaska  | 78965   | 6     |
+      | campus  | 123654      | ollll   | saaa    | newburg | 45698   | 7     |
