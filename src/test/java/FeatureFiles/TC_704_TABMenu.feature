@@ -9,11 +9,11 @@ Feature: TAB Menu functionality
     And the user clicks the SignIn button
     Then user confirms that a successful SignIn process has taken place
 
-    Scenario: the user navigates through the TAB menu sections
-      And the user navigates through the TAB menu sections:
-      |men|women|gear|training|sale|
-      |tops|bottoms|bags|fintess equipment|watches|
-      |video download|jackets|hooodies & sweatshirts|tees|tanks|
-      |pants         |shorts |bras & tanks          |empty|empty|
+
+  Scenario: the user navigates through the Tab menu sections
+    And the user navigates through the TAB menu sections with one level elements:
+    And the user navigates through the TAB menu sections with two level elements
+    And the user navigates through the TAB menu sections with three level elements
+    Then the user verifies that the last pages are opened
 
 
