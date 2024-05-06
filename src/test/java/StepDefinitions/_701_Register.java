@@ -22,15 +22,15 @@ public class _701_Register {
 
     @Given("User navigate to the Magento Website")
     public void userNavigateToTheMagentoWebsite() {
-    GWD.getDriver().get("https://magento.softwaretestingboard.com/");
+        GWD.getDriver().get("https://magento.softwaretestingboard.com/");
 
 
-        if (dc.einwilligen.size()>0)
+        if (dc.einwilligen.size() > 0) {
             wait.until(ExpectedConditions.elementToBeClickable(dc.einwilligen.get(0)));
 
             dc.myClick(dc.einwilligen.get(0));
+        }
     }
-
     @When("User clicks the Create Account link")
     public void userClicksTheCreateAccountLink() {
         dc.myClick(dc.createAccount);
