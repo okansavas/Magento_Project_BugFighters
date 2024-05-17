@@ -48,6 +48,7 @@ public class ParentPage {
 
     public void SelectMenuValue(WebElement element,String Value){
         Select select=new Select(element);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
         select.selectByValue(Value);
     }
 
